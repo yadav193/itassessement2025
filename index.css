@@ -1,0 +1,110 @@
+:root {
+    --neutral-color: #f4f4f4;
+    --primary-color: #1e1e2f;
+    --secondary-color: #00d1b2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('bg.jpg') no-repeat center center/cover;
+    color: var(--neutral-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(30, 30, 47, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+header img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.content-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+}
+
+.content-box h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+.content-box p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.admission-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.admission-button:hover {
+    background-color: #00b3a1;
+}
+
+footer {
+    background-color: rgba(30, 30, 47, 0.9);
+    text-align: center;
+    padding: 1rem;
+    color: var(--neutral-color);
+}
+
+@media (max-width: 768px) {
+    header img {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(30, 30, 47, 0.95);
+        justify-content: space-around;
+        padding: 1rem;
+        z-index: 999;
+    }
+}
