@@ -1,0 +1,112 @@
+:root {
+    --neutral-color: #ffffff;
+    --primary-color: #1e1e2f;
+    --secondary-color: #00d1b2;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--neutral-color);
+    color: #222;
+  }
+
+  header {
+    background-color: rgba(30, 30, 47, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  header img {
+    height: 50px;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+
+  .form-container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #004a7c;
+  }
+
+  label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+  }
+
+  input[type="text"], input[type="email"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #007acc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #005f99;
+  }
+
+
+  
+  footer {
+    background-color: rgba(30, 30, 47, 0.9);
+    text-align: center;
+    padding: 1rem;
+    color: var(--neutral-color);
+  }
+  @media (max-width: 768px) {
+    header img {
+      display: none;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(30, 30, 47, 0.95);
+      justify-content: space-around;
+      padding: 1rem;
+      z-index: 999;
+    }
+  }
